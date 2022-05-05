@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 {
     if (argc != 2) // check proper format
     {
-        printf("usage: ./server <port>\n");
+        printf("usage: ./a.out <port>\n");
         exit(EXIT_FAILURE);
     }
 
@@ -61,7 +61,7 @@ void echo(int sockfd, struct sockaddr *pcliaddr, socklen_t clilen)
 
         if ((rand() % 10) < 3) //simulate packet drop
         {
-            printf("[server]: packet dropped\n"); // print packet drop
+            printf("[server] : packet dropped\n"); // print packet drop
         }
         else
         {

@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 
     if (argc != 3) // incorrect command line format
     {
-        printf("usage : ./client <hostname> <port>\n");
+        printf("usage : ./a.out <hostname> <port>\n");
         exit(1);
     }
 
@@ -75,7 +75,7 @@ void cli(FILE *fp, int sockfd, const struct sockaddr *pservaddr, socklen_t servl
         gettimeofday(&end, NULL);                          // end all
         recvline[n] = '\0';                                //terminate
 
-        printf("%2d: Sent PING... ", i + 1);
+        printf("%2d : Sent PING... ", i + 1);
         struct timeval diff; // store RTT for later
         diff.tv_sec = 0;
         diff.tv_usec = (end.tv_sec - begin.tv_sec) * 1000000 + end.tv_usec - begin.tv_usec;
