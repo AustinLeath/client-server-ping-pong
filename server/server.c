@@ -57,7 +57,7 @@ void echo(int sockfd, struct sockaddr *pcliaddr, socklen_t clilen)
         len = clilen;
         n = recvfrom(sockfd, mesg, MAXLINE, 0, pcliaddr, &len); //recvfrom function
 
-        printf("[client]: %s", mesg);
+        printf("[client] : %s", mesg);
 
         if ((rand() % 10) < 3) //simulate packet drop
         {
