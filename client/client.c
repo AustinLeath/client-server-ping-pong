@@ -83,7 +83,7 @@ void cli(FILE *fp, int sockfd, const struct sockaddr *pservaddr, socklen_t servl
         if (n >= 0)
         {
             // not lost
-            printf("received b'PONG'\n", usec);
+            printf("received b'PONG'\n");
             received++;
             min = (usec < min) ? usec : min;
             max = (usec > max) ? usec : max;
