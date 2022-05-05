@@ -49,7 +49,7 @@ void echo(int sockfd, struct sockaddr *pcliaddr, socklen_t clilen)
     socklen_t len;
     char mesg[] = "PONG\n"; //reply with pong
 
-    printf("[server]: ready to accept data...\n");
+    printf("[server] : ready to accept data...\n");
     srand(time(0)); // seed
 
     while (1) //infinite while loop
