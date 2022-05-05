@@ -6,10 +6,10 @@ THIS WAS DESIGNED TO RUN ON THE CSE SERVERS
 
 3. Once in the server directory you can compile and run the server like so:
     - `gcc *.c`
-    - `./a.out 8008`
+    - `./a.out <port>`
 
 4. Once the server is up and running, connect to the same CSE server in a different terminal and navigate to the client sub-directory
 
 5. Once in the client directory you can compile and run the client like so:
     - `gcc *.c`
-    - `./a.out localhost 8008`
+    - `./a.out <hostname> <port>`
