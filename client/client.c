@@ -91,7 +91,7 @@ void cli(FILE *fp, int sockfd, const struct sockaddr *pservaddr, socklen_t servl
         }
         else
         {
-            printf("Timed out\n"); // lost due to timeout
+            printf("Timed Out\n"); // lost due to timeout
         }
     }
     double average = (double)avg / received;
