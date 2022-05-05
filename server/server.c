@@ -61,7 +61,7 @@ void echo(int sockfd, struct sockaddr *pcliaddr, socklen_t clilen)
 
         if ((rand() % 10) < 3) //simulate packet drop
         {
-            printf("[server]: dropped packet\n"); // print packet drop
+            printf("[server]: packet dropped\n"); // print packet drop
         }
         else
         {
