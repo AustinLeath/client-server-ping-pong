@@ -83,7 +83,7 @@ void cli(FILE *fp, int sockfd, const struct sockaddr *pservaddr, socklen_t servl
         if (n >= 0)
         {
             // not lost
-            printf("RTT=0.%lu000 ms\n", usec);
+            printf("received b'PONG'\n", usec);
             received++;
             min = (usec < min) ? usec : min;
             max = (usec > max) ? usec : max;
@@ -95,5 +95,4 @@ void cli(FILE *fp, int sockfd, const struct sockaddr *pservaddr, socklen_t servl
         }
     }
     double average = (double)avg / received;
-    printf("%d pkts xmited, %d pkts rcvd, %d%% pkt loss\nmin: %.6f ms, max: %.6f ms, avg: %.6f ms\n", (int)sent, (int)received, (int)(100 * (sent - received) / sent), (double)min / 1000, (double)max / 1000, average / 1000); //formulated print
 }
